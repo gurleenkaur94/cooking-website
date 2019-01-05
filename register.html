@@ -1,0 +1,155 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title></title>
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+<link href='http://fonts.googleapis.com/css?family=Satisfy|Fjalla+One|Open+Sans:400,600,700' rel='stylesheet' type='text/css'>
+<link href="default.css" rel="stylesheet" type="text/css" media="all" />
+<script language="javascript">
+function regis()
+{
+	var a=document.reg.fn.value;
+	var b=document.reg.ln.value;
+	var c=document.reg.em.value;
+	var d=document.reg.ps.value;
+	var e=document.reg.cp.value;
+	var f=document.reg.g.value;
+var j=0;
+var n=0;
+flag=true;
+var len=c.length;
+for(i=0;i<len;i++)
+{
+	var m=c.charAt(i);
+	if(m=='@')
+	{
+		j++;
+	}
+	else if(m=='.')
+	{
+		n++;
+	}
+}
+if(j!=1|| n<1)
+{
+	alert("Invalid Email id");
+	flag=false;
+}
+
+if(a=="")
+{
+	alert("Enter Firstname");
+	flag=false;
+}
+else if(b=="")
+{
+	alert("Enter Lastname");
+	flag=false;
+}
+else if(c=="")
+{
+	alert("Enter Email id");
+	flag=false;
+}
+else if(d=="")
+{
+	alert("Enter Password");
+	flag=false;
+}
+else if(e=="")
+{
+	alert("Enter Confirm Password");
+	flag=false;
+}
+else if(d!=e)
+{ 	
+	alert("Password Does not match");
+	flag=false;
+}
+else if(document.getElementById('j').checked==false)
+{
+	if(document.getElementById('j1').checked==false)
+	{
+		alert("Select Gender");
+		flag=false;
+	}
+}
+return flag;
+
+}
+
+</script>
+
+
+</head>
+<body>
+<div id="wrapper">
+	<div id="page" class="container">
+		<div id="content"> <a href="#" class="image-style"><img src="images/dsc_8376.jpg" width="725" height="300" alt="" /></a>
+			
+            <div id="box1" class="post">
+				<h2><a href="index.html">Register</a></h2> </div>
+                
+                <div>
+                <form name="reg" action="#" method="post" onsubmit="return regis()" >
+                
+                 <table align="center" cellpadding="10" border="0" width="600">
+                 <tr> 
+                 <td>First name: </td> <td> <input type="text" name="fn" size="30"/> </td>
+                 </tr>
+                 <tr> 
+                 <td>Last name: </td> <td> <input type="text" name="ln" size="30"/> </td>
+                 </tr>
+                 <tr> 
+                  <tr> 
+                 <td> Gender: </td> <td> Male <input type="radio" name="g" id="j" value="male" />  
+                 Female <input type="radio" name="g" id="j1" value="female" /> </td>
+                 </tr>
+                 <td>Email_id: </td> <td> <input type="text" name="em" size="30"/> </td>
+                 </tr>
+                 <tr> 
+                 <td>Password: </td> <td> <input type="password" name="ps" size="30"/> </td>
+                 </tr>
+                 <tr> 
+                 <td> Confirm Password: </td> <td> <input type="password" name="cp" size="30"/> </td>
+                 </tr>
+                
+                 <tr>
+            	<th colspan="2"><input type="submit" value="SignUp"  /></th>
+            	</tr>
+            	</table>
+                </form>
+               </div>
+                
+			
+			<div id="footer">
+				<p> <a href="index.html">Home</a>&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;<a href="login.php">Login</a>&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;<a href="register.php">Register</a>&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;<a href="feedback.php">feedback</a></p>
+                <p>Copyright (c) 2019 Punjabi Rasoi. All rights reserved.</p>
+			</div>
+		</div>
+		<div id="sidebar">
+			<div id="logo">
+				<h1><a href="index.html">Punjabi rasoi</a></h1>
+			</div>
+			<div id="menu" class="box">
+				<ul>
+					<li><a href="index.html">HOME</a></li>
+					
+                    <li> <a href="login1.html"> UPLOAD RECIPES </a></li>
+					<li><a href="feedback.html" >FEEDBACK</a></li>
+                    <li><a href="register.html" >REGISTER</a></li>
+                      <li><a href="login.html" >LOGIN</a></li>
+					
+				</ul>
+			</div>
+         
+		</div>
+	</div>
+	<div class="clearfix">&nbsp;</div>
+</div>
+</body>
+</html>
